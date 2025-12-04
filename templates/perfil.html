@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Perfil</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- icones do site -->
+    <link href="/static/img/icone_pc.png" rel="icon">
+    <link href="/static/img/icone_celular.png" rel="apple-touch-icon">
+
+    <!-- fontes do google -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <!-- Vendor -->
+    <link href="/static/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- css principal -->
+    <link href="/static/css/estilodashboards.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- comeco navbar -->
+<nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <img src="/static/img/logoo.png" class="logo" alt="...">
+
+        <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboards">Dashboards</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="/perfil">Perfil</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="/despesas">Despesas</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="btn btn-a " href="/">Sair</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav><!-- fim da navbar -->
+
+<main id="main">
+
+   <!-- intro -->
+    <section class="intro-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-8">
+                    <div class="title-single-box">
+                        <h1 class="title-single">Perfil</h1>
+                        <span class="color-text-a">Suas informações cadastrais:</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- fim da intro-->
+
+  <!-- informacoes -->
+    <section class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 mb-0">
+                    <div class="row">
+
+                        <div class="col-md-7">
+
+
+                            <div class="row">
+                            <div class="title-single-box mt-3 col-md-6">
+                                <h5 class="title-single">Nome da empresa:</h5> <span class="color-text-a">{{ perfil[1]  }}</span>
+                            </div>
+                                <div class="title-single-box mt-3 col-md-6">
+                                <h5 class="title-single">Nome do representante:</h5> <span class="color-text-a">{{ perfil[2]  }}</span>
+                            </div>
+                            </div>
+                            <div class="row">
+                            <div class="title-single-box col-md-6 mt-3">
+                                <h5 class="title-single">Porte da empresa:</h5> <span class="color-text-a">{{ perfil[5]  }}</span>
+                            </div>
+                            </div>
+                            <div class="title-single-box mt-5">
+                                <h3 class="title-single">Telefone e email de recuperação:</h3>
+                            </div>
+                            <div class="title-single-box mt-3">
+                                <h5 class="title-single">Telefone:</h5> <span class="color-text-a">{{ perfil[4]  }}</span>
+                            </div>
+                            <div class="title-single-box mt-3">
+                                <h5 class="title-single">E-mail:</h5> <span class="color-text-a">{{ perfil[3]  }}</span>
+                            </div>
+                            <div class="title-single-box mt-5">
+                                <h3 class="title-single">Endereço:</h3>
+                            </div>
+                            <div class="row">
+                            <div class="title-single-box col-md-6 mt-3">
+                                <h5 class="title-single">Nome da cidade:</h5> <span class="color-text-a">{{ perfil[7]  }}</span>
+                            </div>
+                            <div class="title-single-box col-md-6 mt-3">
+                                <h5 class="title-single">Estado:</h5> <span class="color-text-a">{{ perfil[6]  }}</span>
+                            </div>
+                            </div>
+                            <div class="row">
+                                <div class="title-single-box col-md-6 mt-3">
+                                    <h5 class="title-single">Nome da rua:</h5> <span class="color-text-a">{{ perfil[8]  }}</span>
+                                </div>
+                                <div class="title-single-box col-md-6 mt-3">
+                                    <h5 class="title-single">Nome do bairro:</h5> <span class="color-text-a">{{ perfil[9]  }}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="title-single-box col-md-6 mt-3">
+                                    <h5 class="title-single">Número do CEP:</h5> <span class="color-text-a">{{ perfil[10]  }}</span>
+                                </div>
+                                <div class="title-single-box col-md-6 mt-3">
+                                    <h5 class="title-single">Número do prédio:</h5> <span class="color-text-a">{{ perfil[11]  }}</span>
+                                </div>
+                                <div class="title-single-box mt-5">
+                                    <h3 class="title-single">Senha:</h3>
+                                </div>
+                                <div class="title-single-box mt-3">
+                                    <span class="color-text-a">{{ perfil[13] }}</span>
+                                </div>
+                                <div class="col-md-12 text-center mt-5">
+                                    <a class="btnEnviar " href="/editar-perfil/{{ perfil[0] }}">Editar informações  <i class="bi bi-pencil"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-5 section-md-t3">
+                            <div class="icon-box section-b2">
+                                <div class="icon-box-icon">
+                                    <span class="bi bi-envelope"></span>
+                                </div>
+                                <div class="icon-box-content table-cell">
+                                    <div class="icon-box-title">
+                                        <h4 class="icon-title">Envie uma mensagem</h4>
+                                    </div>
+                                    <div class="icon-box-content">
+                                        <p class="mb-1">Email:
+                                            <span class="color-a">draxma@yopmail.com</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- fim das informações-->
+
+</main><!-- fim do main -->
+
+<!-- inicio rodapé -->
+<footer class="mt-5">
+    <nav class="nav-footer">
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <a href="/dashboards">Dashboards</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="/perfil">Perfil</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="/despesas">Despesas</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="copyright-footer">
+        <p class="copyright color-text-a">
+            &copy; Copyright
+            <span class="color-a">Draxma</span> Todos os direitos reservados.
+        </p>
+    </div>
+</footer><!-- fim do rodapé -->
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor -->
+<script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/static/vendor/swiper/swiper-bundle.min.js"></script>
+
+
+<!-- main JS -->
+<script src="/static/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Editar perfil</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link href="/static/img/icone_pc.png" rel="icon">
+    <link href="/static/img/icone_celular.png" rel="apple-touch-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+    <link href="/static/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="/static/css/estilodashboards.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <img src="/static/img/logoo.png" class="logo" alt="...">
+
+        <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <a class="nav-link " href="/dashboards">Dashboards</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="/perfil">Perfil</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="/despesas">Despesas</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="btn btn-a" href="{{ url_for('sair_bp.sair') }}">Sair</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main id="main">
+
+    <section class="intro-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-8">
+                    <div class="title-single-box">
+                        <h1 class="title-single">Editar perfil</h1>
+                        <span class="color-text-a">Atualize os dados necessários, depois clique em "Salvar alterações".</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 mb-0">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <form action="/editar-perfil/{{ e[0] }}" method="post">
+                                <fieldset>
+                                    <div class="row">
+                                        <div class="col-md-9 ">
+                                            <input type="text" id="nome_empresa"  name="nome_empresa" class="form-control" value="{{ e[1] }}" required>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input type="text" id="nome_representante" name="nome_representante" class="form-control" value="{{ e[2] }}" required>
+                                        </div>
+                                    </div>
+                                    <select class="custom-select mt-3" name="porte_empresa">
+                                        <option selected>Selecione o porte da empresa:</option>
+                                        <option value="Empresa de Grande Porte" {% if e[5] == 'Empresa de Grande Porte' %}selected{% endif %}>Empresa de Grande Porte</option>
+                                        <option value="Empresa de Médio Porte" {% if e[5] == 'Empresa de Médio Porte' %}selected{% endif %}>Empresa de Médio Porte</option>
+                                        <option value="EPP (Empresa de Pequeno Porte) {% if e[5] == 'EPP (Empresa de Pequeno Porte)' %}selected{% endif %}">EPP (Empresa de Pequeno Porte)</option>
+                                        <option value="Microempresa" {% if e[5] == 'Microempresa' %}selected{% endif %}>Microempresa</option>
+                                    </select>
+                                    <div class="title-single-box mt-4">
+                                        <h3 class="title-single">Insira telefone e email de recuperação:</h3>
+                                    </div>
+                                    <div class="col-md-12 mt-3">
+                                        <input type="text" id="tel_recuperacao" name="tel_recuperacao" class="form-control" value="{{ e[4] }}" required>
+                                    </div>
+                                    <div class="col-md-12 mt-3">
+                                        <input type="text" id="email_recuperacao" name="email_recuperacao" class="form-control" value="{{ e[3] }}" required>
+                                    </div>
+                                    <div class="title-single-box">
+                                        <h3 class="title-single mt-4">Endereço</h3>
+                                        <h6 class="title-single mt-2">Caso a empresa não possua sede física, informe o endereço fiscal ou de correspondência.</h6>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6 mt-3">
+                                            <input type="text" id="cidade" name="cidade" class="form-control" value="{{ e[7] }}" required>
+                                        </div>
+                                        <div class="col-md-6 mt-1" >
+                                            <select name="estado" id="estado" class="custom-select mt-3">
+                                                <option value="">Selecione o Estado:</option>
+                                                <option value="AC">Acre (AC) {% if e[6] == 'AC' %}selected{% endif %}</option>
+                                                <option value="AL">Alagoas (AL) {% if e[6] == 'AL' %}selected{% endif %}</option>
+                                                <option value="AP">Amapá (AP) {% if e[6] == 'AP' %}selected{% endif %}</option>
+                                                <option value="AM">Amazonas (AM) {% if e[6] == 'AM' %}selected{% endif %}</option>
+                                                <option value="BA">Bahia (BA) {% if e[6] == 'BA' %}selected{% endif %}</option>
+                                                <option value="CE">Ceará (CE) {% if e[6] == 'CE' %}selected{% endif %}</option>
+                                                <option value="DF">Distrito Federal (DF) {% if e[6] == 'DF' %}selected{% endif %}</option>
+                                                <option value="ES">Espírito Santo (ES) {% if e[6] == 'ES' %}selected{% endif %}</option>
+                                                <option value="GO">Goiás (GO) {% if e[6] == 'GO' %}selected{% endif %}</option>
+                                                <option value="MA">Maranhão (MA) {% if e[6] == 'MA' %}selected{% endif %}</option>
+                                                <option value="MT">Mato Grosso (MT) {% if e[6] == 'MT' %}selected{% endif %}</option>
+                                                <option value="MS">Mato Grosso do Sul (MS) {% if e[6] == 'MS' %}selected{% endif %}</option>
+                                                <option value="MG">Minas Gerais (MG) {% if e[6] == 'MG' %}selected{% endif %}</option>
+                                                <option value="PA">Pará (PA) {% if e[6] == 'PA' %}selected{% endif %}</option>
+                                                <option value="PB">Paraíba (PB) {% if e[6] == 'PB' %}selected{% endif %}</option>
+                                                <option value="PR">Paraná (PR) {% if e[6] == 'PR' %}selected{% endif %}</option>
+                                                <option value="PE">Pernambuco (PE) {% if e[6] == 'PE' %}selected{% endif %}</option>
+                                                <option value="PI">Piauí (PI) {% if e[6] == 'PI' %}selected{% endif %}</option>
+                                                <option value="RJ">Rio de Janeiro (RJ) {% if e[6] == 'RJ' %}selected{% endif %}</option>
+                                                <option value="RN">Rio Grande do Norte (RN) {% if e[6] == 'RN' %}selected{% endif %}</option>
+                                                <option value="RS">Rio Grande do Sul (RS) {% if e[6] == 'RS' %}selected{% endif %}</option>
+                                                <option value="RO">Rondônia (RO) {% if e[6] == 'RO' %}selected{% endif %}</option>
+                                                <option value="RR">Roraima (RR) {% if e[6] == 'RR' %}selected{% endif %}</option>
+                                                <option value="SC">Santa Catarina (SC) {% if e[6] == 'SC' %}selected{% endif %}</option>
+                                                <option value="SP">São Paulo (SP) {% if e[6] == 'SP' %}selected{% endif %}</option>
+                                                <option value="SE">Sergipe (SE) {% if e[6] == 'SE' %}selected{% endif %}</option>
+                                                <option value="TO">Tocantins (TO) {% if e[6] == 'TO' %}selected{% endif %}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6 mt-3">
+                                            <input type="text" id="rua" name="rua" class="form-control" value="{{ e[8] }}" required>
+                                        </div>
+                                        <div class="col-md-6 mt-3">
+                                            <input type="text" id="bairro" name="bairro" class="form-control" value="{{ e[9] }}" required>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6 mt-3">
+                                            <input type="text" id="cep" name="cep" class="form-control" value="{{ e[10] }}" required>
+                                        </div>
+                                        <div class="col-md-6 mt-3">
+                                            <input type="number" id="numpredio" name="numpredio" class="form-control" value="{{ e[11] }}" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mt-3">
+                                        <input type="text" id="senha" name="senha" class="form-control" value="{{ e[13] }}" required>
+                                    </div>
+                                    <div class="col-md-12 text-center mt-5">
+                                        <button type="submit" class="btnEnviar">Salvar alterações  <i class="bi bi-check-lg"></i></button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="col-md-5 section-md-t3">
+                            <div class="icon-box section-b2">
+                                <div class="icon-box-icon">
+                                    <span class="bi bi-envelope"></span>
+                                </div>
+                                <div class="icon-box-content table-cell">
+                                    <div class="icon-box-title">
+                                        <h4 class="icon-title">Envie uma mensagem:</h4>
+                                    </div>
+                                    <div class="icon-box-content">
+                                        <p class="mb-1">Email:
+                                            <span class="color-a">draxma@yopmail.com</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+{#------------------------------------------------- INÍCIO DO RODAPÉ -------------------------------------------------#}
+<footer class="mt-5">
+    <nav class="nav-footer">
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <a href="dashboards.html">Dashboards</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="perfil.html">Perfil</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="despesas.html">Despesas</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="copyright-footer">
+        <p class="copyright color-text-a">
+            &copy; Copyright
+            <span class="color-a">Draxma</span> Todos os direitos reservados.
+        </p>
+    </div>
+</footer>
+{#---------------------------------------------------- FIM DO RODAPÉ --------------------------------------------------#}
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+<script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/static/vendor/swiper/swiper-bundle.min.js"></script>
+
+<script src="/static/js/main.js"></script>
+
+</body>
+
+</html>

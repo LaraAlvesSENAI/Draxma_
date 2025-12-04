@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Página inicial</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+    <!-- Icones do sistema -->
+  <link href="/static/img/icone_pc.png" rel="icon" class="imgiconpc">
+  <link href="/static/img/icone_celular.png" rel="apple-touch-icon" class="imgiconcelular">
+
+  <!-- Fontes do Google -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Vendor -->
+  <link href="/static/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!--css principal-->
+  <link rel="stylesheet" href={{ url_for('static',filename='css/estiloindex.css') }}>
+{#    <link href="/static/css/estiloindex.css" rel="stylesheet">#}
+
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+    <div class="container">
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <img src="/static/img/logoo.png" class="logo" alt="...">
+
+      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="/">Página Inicial</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="/sobre">Sobre Nós</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="/contato">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="/login">Entrar</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-a " href="/cadastro-usuario">Cadastre-se</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- intro -->
+  <div class="intro intro-carousel swiper position-relative">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(/static/img/banner_home1.png)">
+        <div class="overlay overlay-a"></div>
+        <div class="intro-content display-table">
+          <div class="table-cell">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="intro-body">
+                    <p class="intro-title-top">Draxma
+                    </p>
+                    <h1 class="intro-title mb-4 ">
+                      gestão financeira para<span class="color-b"> empresas </span>
+                      <br>
+                    </h1>
+                    <p class="intro-subtitle intro-price">
+                      <a class="price-a " href="/cadastro-usuario">Cadastre-se</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(/static/img/banner_home2.png)">
+        <div class="overlay overlay-a"></div>
+        <div class="intro-content display-table">
+          <div class="table-cell">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="intro-body">
+                    <p class="intro-title-top">Draxma
+                    </p>
+                    <h1 class="intro-title mb-4">
+                      Cresça com <span class="color-b"> inteligência financeira</span>
+                      <br>
+                    </h1>
+                    <p class="intro-subtitle intro-price">
+                      <a class="price-a " href="/cadastro-usuario">Cadastre-se</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide carousel-item-a intro-item bg-image" style="background-image: url(/static/img/banner_home3.png)">
+        <div class="overlay overlay-a"></div>
+        <div class="intro-content display-table">
+          <div class="table-cell">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="intro-body">
+                    <p class="intro-title-top">Draxma
+                    </p>
+                    <h1 class="intro-title mb-4">
+                      Registre. Analise. <span class="color-b">Decida. </span>
+                      <br>
+                    </h1>
+                    <p class="intro-subtitle intro-price">
+                      <a class="price-a " href="/cadastro-usuario">Cadastre-se</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div><!-- fim da intro -->
+
+  <main id="main">
+
+    <!-- inicio slides -->
+    <section class="section-property section-t8">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title-wrap d-flex justify-content-between">
+              <div class="title-box">
+                <h2 class="title-a">Tudo o que sua empresa precisa para uma gestão financeira mais ágil e visual:</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="property-carousel" class="swiper">
+          <div class="swiper-wrapper">
+
+
+            <div class="carousel-item-b swiper-slide">
+              <div class="card-box-a card-shadow">
+                <div class="img-box-a">
+                  <img src="/static/img/tabelas_personalizadas.png" alt="" class="img-a img-fluid">
+                </div>
+                <div class="card-overlay">
+                  <div class="card-overlay-a-content">
+                    <div class="card-header-a">
+                      <h2 class="card-title-a">
+                        <a>Tabelas
+                          <br /> personalizadas</a>
+                      </h2>
+                    </div>
+                    <div class="card-body-a">
+                      <div class="card-info d-flex justify-content-around">
+                        <p class="content-c">Transforme suas despesas em tabelas de fácil visualização.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- fim do primeiro slide -->
+
+            <div class="carousel-item-b swiper-slide">
+              <div class="card-box-a card-shadow">
+                <div class="img-box-a">
+                  <img src="/static/img/alertas_visiveis.png" alt="" class="img-a img-fluid">
+                </div>
+                <div class="card-overlay">
+                  <div class="card-overlay-a-content">
+                    <div class="card-header-a">
+                      <h2 class="card-title-a">
+                        <p>Informações relevantes
+                          <br /> visíveis</p>
+                      </h2>
+                    </div>
+                    <div class="card-body-a">
+                      <div class="card-info d-flex justify-content-around">
+                        <p class="content-c">Transforme suas despesas em cards visíveis.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- fim do segundo slide -->
+
+            <div class="carousel-item-b swiper-slide">
+              <div class="card-box-a card-shadow">
+                <div class="img-box-a">
+                  <img src="/static/img/exporte_em_pdf.png" alt="" class="img-a img-fluid">
+                </div>
+                <div class="card-overlay">
+                  <div class="card-overlay-a-content">
+                    <div class="card-header-a">
+                      <h2 class="card-title-a">
+                        <a>exporte seus
+                          <br/> relatórios em pdf </a>
+                      </h2>
+                    </div>
+                    <div class="card-body-a">
+                      <div class="card-info d-flex justify-content-around">
+                        <p class="content-c">Baixe as tabelas geradas em formato de pdf no seu dispositivo.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- fim do terceiro slide -->
+          </div>
+        </div>
+        <div class="propery-carousel-pagination carousel-pagination"></div>
+
+      </div>
+    </section><!-- fim dos slides -->
+
+    <!-- frase -->
+    <section class="section-agents section-t8">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title-wrap d-flex justify-content-between">
+              <div class="title-box">
+                <h2 class="title-a">Mais controle, mais lucro,
+                  mais crescimento.</h2>
+                <div class="title-link">
+                  <p> As decisões certas começam com finanças bem geridas.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+{#      inicio do rodapé   #}
+  <footer>
+    <nav class="nav-footer">
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a href="/">Página Inicial</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="/sobre">Sobre Nós</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="/contato">Contato</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="/login">Entrar</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="/cadastro-usuario">Cadastre-se</a>
+        </li>
+      </ul>
+    </nav>
+          <div class="copyright-footer">
+            <p class="copyright color-text-a">
+              &copy; Copyright
+              <span class="color-a">Draxma</span> Todos os direitos reservados.
+            </p>
+          </div>
+  </footer><!-- fim do rodapé -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor -->
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/vendor/swiper/swiper-bundle.min.js"></script>
+<!--  <script src="vendor/php-email-form/validate.js"></script>-->
+
+  <!-- main JS -->
+  <script src="/static/js/main.js"></script>
+  </main>
+</body>
+</html>
